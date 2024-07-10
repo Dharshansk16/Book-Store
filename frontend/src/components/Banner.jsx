@@ -8,7 +8,7 @@ export default function Banner() {
     <>
       <div className="mx-w-screen-2xl container mx-auto md:px-10 px-4 flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 m-4 md:m-8">
-          <div className="flex  flex-col gap-8 mr-4 md:mr-0">
+          <div className="flex  flex-col gap-10 mr-4 md:mr-0">
             <h1 className="text-4xl font-bold">
               Welcome to <TextYellow text="bookStore" /> <br />
               Discover Your Next Great <TextYellow text="Read With Us" />
@@ -25,7 +25,15 @@ export default function Banner() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2">right</div>
+        <div className="w-full md:w-1/2 ">
+          <div className="container ml-12">
+            <img
+              className="h-full w-3/4"
+              src="../src/assets/book-store-ai.png"
+              alt="bookStore"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
