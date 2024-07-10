@@ -52,7 +52,7 @@ export default function Navbar() {
             <DarKModeSwitch />
           </div>
           <div className="ml-1">
-            <a className="bg-black text-white px-4 py-2 rounded-lg hover:bg-slate-400">
+            <a className="bg-base-200 text-white px-4 py-2 rounded-lg hover:bg-slate-400">
               Button
             </a>
           </div>
