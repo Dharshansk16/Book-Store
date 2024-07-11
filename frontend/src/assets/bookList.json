@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "What every body is saying",
+    "description": "What Every BODY is Saying by Joe Navarro is a guide to reading nonverbal communication. Written by a former FBI agent, it helps readers interpret body language to enhance communication and detect deception",
+    "price": "0$",
+    "category": "free",
+    "author": "Joe Navarro",
+    "img": "https://m.media-amazon.com/images/I/41EpYVnuubL._SY445_SX342_.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Atomic Habits",
+    "description": "Atomic Habits by James Clear offers a practical guide to building good habits and breaking bad ones",
+    "price": "0$",
+    "category": "free",
+    "author": "James Clear",
+    "img": "https://m.media-amazon.com/images/I/513Y5o-DYtL._SY445_SX342_QL70_FMwebp_.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sapiens",
+    "description": "Sapiens: A Brief History of Humankind by Yuval Noah Harari explores the history of humanity from the emergence of Homo sapiens to the present.",
+    "price": "0$",
+    "category": "free",
+    "author": "Yuval Noah Harari",
+    "img": "https://m.media-amazon.com/images/I/81tPEe0egBL._SL1500_.jpg"
+  },
+  {
+    "id": 4,
+    "name": "The Order of Time",
+    "description": "The Order of Time by Carlo Rovelli explores the nature of time from a scientific perspective.",
+    "price": "0$",
+    "category": "free",
+    "author": "Carlo Rovelli",
+    "img": "https://m.media-amazon.com/images/I/61ctwcJg5dL._SY466_.jpg"
+  },
+  {
+    "id": 5,
+    "name": "The Psychology of Money",
+    "description": "The Psychology of Money by Morgan Housel delves into the emotional and psychological aspects of personal finance.",
+    "price": "0$",
+    "category": "free",
+    "author": "Morgan Housel",
+    "img": "https://www.harpercollins.com/cdn/shop/files/9780061438295.jpg?v=1720608245&width=350"
+  },
+  {
+    "id": 6,
+    "name": "Einstein",
+    "description": "Einstein: His Life and Universe by Walter Isaacson is a comprehensive biography of Albert Einstein.",
+    "price": "0$",
+    "category": "paid",
+    "author": "Walter Isaacson",
+    "img": "https://m.media-amazon.com/images/I/71ChH2YknlS._SY466_.jpg"
+  }
+]

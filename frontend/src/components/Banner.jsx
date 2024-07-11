@@ -6,14 +6,14 @@ import Button from "./banner/Button";
 export default function Banner() {
   return (
     <>
-      <div className="mx-w-screen-2xl container mx-auto md:px-10 px-4 flex flex-col md:flex-row">
+      <div className="mx-w-screen-2xl container mx-auto md:px-10 px-4 flex flex-col md:flex-row ">
         <div className="w-full md:w-1/2 m-4 md:m-8">
           <div className="flex  flex-col gap-10 mr-4 md:mr-0">
             <h1 className="text-4xl font-bold">
               Welcome to <TextYellow text="bookStore" /> <br />
               Discover Your Next Great <TextYellow text="Read With Us" />
             </h1>
-            <p className="mr-4 md:mr-4 md:text-l">
+            <p className="mr-4 md:mr-4 md:text-lg">
               Discover a world of stories at <TextYellow text="bookStore" />.
               From the latest bestsellers to timeless classics, our collection
               has something for every reader. Dive into new adventures and let
@@ -34,6 +34,9 @@ export default function Banner() {
             />
           </div>
         </div>
+      </div>
+      <div className="mb-8">
+        <hr />
       </div>
     </>
   );
