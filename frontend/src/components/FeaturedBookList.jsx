@@ -10,7 +10,6 @@ export default function FeaturedBookList() {
   const filteredBooks = bookList.filter((book) => {
     return book.category === "free";
   });
-
   var settings = {
     dots: true,
     infinite: false,
@@ -47,8 +46,8 @@ export default function FeaturedBookList() {
   };
   return (
     <>
-      <div className="mx-w-screen-2xl container mx-auto md:px-10 px-4 flex flex-col justify-start my-8">
-        <div className="flex  flex-col gap-6  md:mr-0 mb-16">
+      <div className="mx-w-screen-2xl container mx-auto md:px-10 px-4 flex flex-col ml-8 my-8">
+        <div className="flex  flex-col gap-6  mb-16">
           <h1 className="text-xl md:text-2xl font-bold">
             Featured <TextYellow text="Books" />
           </h1>
