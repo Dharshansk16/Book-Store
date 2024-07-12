@@ -1,20 +1,29 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NavItems() {
   return (
     <>
-      <li>
-        <a>Home</a>
-      </li>
-      <li>
-        <a>Course</a>
-      </li>
-      <li>
-        <a>Contact</a>
-      </li>
-      <li>
-        <a>About</a>
-      </li>
+      <NavLink to="/">
+        <li>
+          <p>Home</p>
+        </li>
+      </NavLink>
+      <NavLink to="/books">
+        <li>
+          <p>Book</p>
+        </li>
+      </NavLink>
+      <NavLink to="/contact">
+        <li>
+          <a>Contact</a>
+        </li>
+      </NavLink>
+      <NavLink to="/about">
+        <li>
+          <a>About</a>
+        </li>
+      </NavLink>
     </>
   );
 }
