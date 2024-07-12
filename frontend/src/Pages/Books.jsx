@@ -1,11 +1,14 @@
 import React from "react";
 import BookList from "../components/BookList";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Books() {
   return (
     <div>
+      <Navbar />
       <BookList />
+      <Footer />
     </div>
   );
 }

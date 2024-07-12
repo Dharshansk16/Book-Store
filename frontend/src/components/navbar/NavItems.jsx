@@ -16,12 +16,12 @@ export default function NavItems() {
       </NavLink>
       <NavLink to="/contact">
         <li>
-          <a>Contact</a>
+          <p>Contact</p>
         </li>
       </NavLink>
       <NavLink to="/about">
         <li>
-          <a>About</a>
+          <p>About</p>
         </li>
       </NavLink>
     </>
