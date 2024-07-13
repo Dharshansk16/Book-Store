@@ -6,7 +6,7 @@ import Button from "./banner/Button";
 export default function Banner() {
   return (
     <>
-      <div className="md:mx-w-screen-2xl max-w-xs  md:container md:mx-auto md:px-10  flex flex-col md:flex-row ">
+      <div className="md:max-w-screen-2xl max-w-sm md:container md:mx-auto md:px-10  flex flex-col md:flex-row ">
         <div className="w-full md:w-1/2 my-4 mx-2 md:m-8">
           <div className="flex  flex-col gap-10">
             <h1 className="md:text-4xl text-2xl font-bold">

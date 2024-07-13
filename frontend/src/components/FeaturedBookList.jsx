@@ -10,6 +10,7 @@ export default function FeaturedBookList() {
   const filteredBooks = bookList.filter((book) => {
     return book.category === "free";
   });
+  // from react-slick-slider
   var settings = {
     dots: true,
     infinite: false,
@@ -46,7 +47,7 @@ export default function FeaturedBookList() {
   };
   return (
     <>
-      <div className="max-w-xs md:max-w-full md:mx-w-screen-2xl md:container md:mx-auto md:px-10 mx-2 flex flex-col  my-8">
+      <div className="max-w-sm  md:max-w-screen-2xl container md:px-10 mx-auto flex flex-col justify-center my-8">
         <div className="flex  flex-col gap-6  mb-8">
           <h1 className="text-xl md:text-2xl font-bold">
             Featured <TextYellow text="Books" />
@@ -60,7 +61,7 @@ export default function FeaturedBookList() {
             authors and thought leaders.
           </p>
         </div>
-        <div className="slider-container mx-4">
+        <div className="slider-container mx-8">
           <Slider {...settings}>
             {filteredBooks.map((book, index) => (
               <BookCard
