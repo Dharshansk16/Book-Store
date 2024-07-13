@@ -2,11 +2,33 @@ import React from "react";
 import NavItems from "./navbar/NavItems";
 import Search from "./navbar/Search";
 import DarKModeSwitch from "./navbar/DarkModeSwitch";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
+  const [onScroll, setOnScroll] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setOnScroll(true);
+      } else {
+        setOnScroll(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
-      <div className="navbar bg-base-100  md:max-w-screen-2xl max-w-md container md:mx-auto md:px-10 px-1 fixed top-0 left-0 right-0 z-40 bg-transparent shadow-lg">
+      <div
+        className={`navbar bg-base-100  md:max-w-screen-2xl max-w-md container md:mx-auto md:px-10 px-1 fixed top-0 left-0 right-0 z-40 bg-transparent transition duration-300 ${
+          onScroll
+            ? "dark:backdrop-brightness-50 dark:backdrop-contrast-100 backdrop-contrast-50 backdrop-brightness-100"
+            : ""
+        } shadow-lg `}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

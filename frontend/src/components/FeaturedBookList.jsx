@@ -47,7 +47,7 @@ export default function FeaturedBookList() {
   };
   return (
     <>
-      <div className="max-w-sm  md:max-w-screen-2xl container md:px-10 mx-auto flex flex-col justify-center my-8">
+      <div className="max-w-sm md:max-w-screen-2xl container md:px-10 mx-auto flex flex-col justify-center my-8">
         <div className="flex  flex-col gap-6  mb-8">
           <h1 className="text-xl md:text-2xl font-bold">
             Featured <TextYellow text="Books" />
