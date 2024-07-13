@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 export default function DarkModeSwitch() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevVal) => (prevVal === "light" ? "dark" : "light"));
+  };
+
   return (
     <label className="swap swap-rotate">
-      <input type="checkbox" className="theme-controller" value="synthwave" />
+      <input
+        type="checkbox"
+        className="theme-controller"
+        checked={theme === "dark"}
+        onChange={toggleTheme}
+        value="synthwave"
+      />
       <svg
         className="swap-off h-7 w-9 mt-3 md:mt-2 fill-current"
         xmlns="http://www.w3.org/2000/svg"

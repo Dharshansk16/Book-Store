@@ -1,17 +1,10 @@
 import React from "react";
-export default function BookCard({
-  name,
-  description,
-  author,
-  category,
-  img,
-  cardWidth,
-}) {
+export default function BookCard({ name, description, author, category, img }) {
   return (
-    <div className="flex md:justify-center ml-4 md:mx-auto my-8">
+    <div className="flex md:justify-center ml-4 md:mx-auto my-8 text-gray-200 shadow-xl">
       <div
         style={{ height: "500px" }}
-        className={`card bg-base-100  h-5/6 md:h-full w-72 md:w-${cardWidth} shadow-xl  transition duration-300 ease-in-out transform hover:scale-105`}
+        className={`card bg-base-100  h-5/6 md:h-full w-72 md:w-96 shadow-xl  transition duration-300 ease-in-out transform hover:scale-105`}
       >
         <figure>
           <img src={img} alt={author} className="object-cover w-full h-full" />

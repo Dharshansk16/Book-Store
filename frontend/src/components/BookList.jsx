@@ -21,7 +21,6 @@ export default function BookList() {
             author={book.author}
             category={book.category}
             img={book.img}
-            cardWidth="96"
           />
         ))}
       </div>

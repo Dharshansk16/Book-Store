@@ -71,7 +71,6 @@ export default function FeaturedBookList() {
                 author={book.author}
                 img={book.img}
                 category={book.category}
-                cardWidth="96"
               />
             ))}
           </Slider>
