@@ -3,6 +3,7 @@ import NavItems from "./navbar/NavItems";
 import Search from "./navbar/Search";
 import DarKModeSwitch from "./navbar/DarkModeSwitch";
 import { useState, useEffect } from "react";
+import Modal from "./form/Modal";
 
 export default function Navbar() {
   const [onScroll, setOnScroll] = useState(false);
@@ -73,11 +74,26 @@ export default function Navbar() {
           <div>
             <DarKModeSwitch />
           </div>
-          <div className="ml-1">
-            <a className="bg-base-200 text-white px-4 py-2 rounded-lg hover:bg-slate-400">
-              Button
-            </a>
-          </div>
+        </div>
+        <div className="ml-24 md:ml-1 transition duration-300">
+          <p
+            onClick={() => document.getElementById("login_modal").showModal()}
+            className="dark:bg-base-200 bg-gray-300 dark:text-white text-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-lg dark:hover:bg-amber-400 hover:bg-slate-400"
+          >
+            Login
+          </p>
+          <Modal id="login_modal" />
+        </div>
+        <div className="ml-24 md:ml-1 transition duration-300">
+          <p
+            onClick={() =>
+              document.getElementById("register_modal").showModal()
+            }
+            className="dark:bg-base-200 bg-gray-300 dark:text-white text-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-lg dark:hover:bg-amber-400 hover:bg-slate-400"
+          >
+            Register
+          </p>
+          <Modal id="register_modal" />
         </div>
       </div>
       <div className="p-10"></div>

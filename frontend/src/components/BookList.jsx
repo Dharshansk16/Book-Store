@@ -1,6 +1,6 @@
 import React from "react";
 import BookCard from "./featured-books-section/BookCard";
-import bookList from "../assets/bookList.json";
+import bookList from "../constants/bookList.json";
 import TextYellow from "../styles/TextYellow";
 
 export default function BookList() {

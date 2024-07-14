@@ -3,10 +3,10 @@ import React from "react";
 export default function Search() {
   return (
     <div className="container">
-      <label className="flex  items-center  w-2/3 sm:w-auto">
+      <label className="flex  items-center  sm:w-auto">
         <input
           type="text"
-          className="grow px-3 py-1 outline-none rounded-lg bg-base-200"
+          className="grow px-3 py-1 outline-none rounded-lg dark:bg-base-200 bg-gray-200 w-1/3 md:w-full"
           placeholder="Search"
         />
         <svg
