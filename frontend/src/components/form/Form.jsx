@@ -76,21 +76,21 @@ export default function Form({
         </div>
         {formName === "Login" ? (
           <div className="w-full flex justify-around">
-            <p className="font-bold badge rounded-lg badge-lg bg-slate-500 text-sm  text-gray-200 hover:text-amber-300">
+            <div className="font-bold badge rounded-lg badge-lg bg-slate-500 text-sm  text-gray-200 hover:text-amber-300">
               <p onClick={handleModalSwitch} className="mx-1">
                 Click here to register
               </p>
               {/* closes current modal, opens register modal */}
-            </p>
+            </div>
           </div>
         ) : (
           <div className="w-full flex justify-around">
-            <p className="font-bold badge rounded-lg badge-lg bg-slate-500 text-sm  text-gray-200 hover:text-amber-300">
+            <div className="font-bold badge rounded-lg badge-lg bg-slate-500 text-sm  text-gray-200 hover:text-amber-300">
               <p onClick={handleModalSwitch} className="mx-1">
                 Already Registered ?
               </p>
               {/* closes the current modal, open login modal */}
-            </p>
+            </div>
           </div>
         )}
       </div>
