@@ -2,10 +2,12 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
-
 import bookRoute from "./routes/book.js";
+import userRoute from "./routes/user.js";
+
 const app = express();
 app.use(cors());
+app.use(express.json());
 dotenv.config();
 
 const PORT = process.env.PORT || 8000;
@@ -22,7 +24,14 @@ try {
 }
 
 //routes
+
+// fetch books
 app.use("/book", bookRoute);
+
+//register user
+app.use("/user", userRoute);
+//User Login
+app.use("/user", userRoute);
 
 app.listen(PORT, () => {
   console.log(`Listening to port ${PORT}`);

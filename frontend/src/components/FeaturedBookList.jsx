@@ -1,12 +1,28 @@
-import React from "react";
-import bookList from "../constants/bookList.json";
+import React, { useEffect, useState } from "react";
+// import bookList from "../constants/bookList.json";
 import TextYellow from "../styles/TextYellow";
 import BookCard from "./featured-books-section/BookCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import axios from "axios";
 
 export default function FeaturedBookList() {
+  const [bookList, setBookList] = useState([]);
+
+  useEffect(() => {
+    const fetchBookList = async () => {
+      try {
+        const response = await axios.get("http://localhost:8001/book");
+        console.log(response.data);
+        setBookList(response.data);
+      } catch (error) {
+        console.error("Error occured while fetching bookList", error);
+      }
+    };
+    fetchBookList();
+  }, []);
+
   const filteredBooks = bookList.filter((book) => {
     return book.category === "free";
   });
