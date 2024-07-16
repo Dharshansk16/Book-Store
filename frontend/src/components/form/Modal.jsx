@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./Form";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Modal({ id }) {
   const [user, setUser] = useState({
@@ -12,16 +13,62 @@ export default function Modal({ id }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setUser((prevVal) => ({
-      prevVal,
+      ...prevVal,
       [name]: value,
     }));
   };
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (id !== "login_modal" && user.password !== user.confirmPassword) {
-      setError("Passwords Don't Match!");
+    if (id === "login_modal") {
+      const userData = {
+        username: user.username,
+        password: user.password,
+      };
+      try {
+        const response = await axios.post(
+          "http://localhost:8001/user/login",
+          userData
+        );
+        console.log(response.data);
+        if (response.data) {
+          document.getElementById(id).close();
+        }
+      } catch (error) {
+        console.log("Login Error", error);
+      }
+      setUser({
+        username: "",
+        password: "",
+      });
       return;
     }
+    //register Modal
+    if (user.password !== user.confirmPassword) {
+      setError("passwords don't match!");
+      return;
+    }
+    const userData = {
+      username: user.username,
+      password: user.password,
+    };
+    try {
+      const response = await axios.post(
+        "http://localhost:8001/user/register",
+        userData
+      );
+      if (response.data) {
+        document.getElementById(id).close();
+        document.getElementById("login_modal").showModal();
+      }
+    } catch (error) {
+      console.log("Error occured", error);
+    }
+    setUser({
+      username: "",
+      password: "",
+      confirmPassword: "",
+    });
   };
   return (
     <div>

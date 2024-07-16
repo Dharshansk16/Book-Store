@@ -28,9 +28,7 @@ try {
 // fetch books
 app.use("/book", bookRoute);
 
-//register user
-app.use("/user", userRoute);
-//User Login
+//user registration and login
 app.use("/user", userRoute);
 
 app.listen(PORT, () => {
