@@ -2,6 +2,7 @@ import React from "react";
 import Form from "./Form";
 import { useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function Modal({ id }) {
   const [user, setUser] = useState({
@@ -32,10 +33,12 @@ export default function Modal({ id }) {
         );
         console.log(response.data);
         if (response.data) {
+          toast.success("Login successfull");
           document.getElementById(id).close();
         }
+        localStorage.setItem("USER", JSON.stringify(response.data.user));
       } catch (error) {
-        console.log("Login Error", error);
+        setError("Invalid username or password");
       }
       setUser({
         username: "",
@@ -58,17 +61,20 @@ export default function Modal({ id }) {
         userData
       );
       if (response.data) {
+        toast.success("User Registered successfully!");
         document.getElementById(id).close();
         document.getElementById("login_modal").showModal();
       }
+      localStorage.setItem("USER", JSON.stringify(response.data.user));
     } catch (error) {
-      console.log("Error occured", error);
+      toast.error(error.response.data.message);
     }
     setUser({
       username: "",
       password: "",
       confirmPassword: "",
     });
+    setError("");
   };
   return (
     <div>
@@ -90,6 +96,7 @@ export default function Modal({ id }) {
                 formName="Login"
                 currentModalId={id}
                 OtherModalId="register_modal"
+                errorText={error}
               />
             </form>
           ) : (

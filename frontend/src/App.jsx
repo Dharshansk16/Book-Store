@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Pages/Home";
 import Books from "./Pages/Books";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/books" element={<Books />} />
         </Routes>
       </Router>
+      <Toaster />
     </div>
   );
 }
