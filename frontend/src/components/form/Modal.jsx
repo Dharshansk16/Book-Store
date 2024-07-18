@@ -33,9 +33,11 @@ export default function Modal({ id }) {
         );
         console.log(response.data);
         if (response.data) {
-          toast.success("Login successfull");
           document.getElementById(id).close();
-          window.location.reload();
+          toast.success("Login successfull");
+          setTimeout(() => {
+            window.location.reload();
+          }, 400);
         }
         localStorage.setItem("USER", JSON.stringify(response.data.user));
       } catch (error) {
@@ -62,8 +64,8 @@ export default function Modal({ id }) {
         userData
       );
       if (response.data) {
-        toast.success("User Registered successfully!");
         document.getElementById(id).close();
+        toast.success("User Registered successfully!");
         document.getElementById("login_modal").showModal();
       }
       localStorage.setItem("USER", JSON.stringify(response.data.user));
