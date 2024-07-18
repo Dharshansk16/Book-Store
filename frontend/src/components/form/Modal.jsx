@@ -35,6 +35,7 @@ export default function Modal({ id }) {
         if (response.data) {
           toast.success("Login successfull");
           document.getElementById(id).close();
+          window.location.reload();
         }
         localStorage.setItem("USER", JSON.stringify(response.data.user));
       } catch (error) {

@@ -4,8 +4,11 @@ import Search from "./navbar/Search";
 import DarKModeSwitch from "./navbar/DarkModeSwitch";
 import { useState, useEffect } from "react";
 import Modal from "./form/Modal";
+import { useAuth } from "../auth_context/AuthProvider";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const { isAuthorised } = useAuth();
   const [onScroll, setOnScroll] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -75,26 +78,40 @@ export default function Navbar() {
             <DarKModeSwitch />
           </div>
         </div>
-        <div className="ml-24 md:ml-1 transition duration-300">
-          <p
-            onClick={() => document.getElementById("login_modal").showModal()}
-            className="dark:bg-base-200 bg-gray-300 dark:text-white text-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-lg dark:hover:bg-amber-400 hover:bg-slate-400"
-          >
-            Login
-          </p>
-          <Modal id="login_modal" />
-        </div>
-        <div className="ml-24 md:ml-1 transition duration-300">
-          <p
-            onClick={() =>
-              document.getElementById("register_modal").showModal()
-            }
-            className="dark:bg-base-200 bg-gray-300 dark:text-white text-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-lg dark:hover:bg-amber-400 hover:bg-slate-400"
-          >
-            Register
-          </p>
-          <Modal id="register_modal" />
-        </div>
+        {isAuthorised ? (
+          <div className="ml-24 md:ml-1 transition duration-300">
+            <Link to={"/user/logout/"}>
+              <button className="dark:bg-base-200 bg-gray-300 dark:text-white text-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-lg dark:hover:bg-amber-400 hover:bg-slate-400">
+                Logout
+              </button>
+            </Link>
+          </div>
+        ) : (
+          <div>
+            <div className="ml-24 md:ml-1 transition duration-300">
+              <p
+                onClick={() =>
+                  document.getElementById("login_modal").showModal()
+                }
+                className="dark:bg-base-200 bg-gray-300 dark:text-white text-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-lg dark:hover:bg-amber-400 hover:bg-slate-400"
+              >
+                Login
+              </p>
+              <Modal id="login_modal" />
+            </div>
+            <div className="ml-24 md:ml-1 transition duration-300">
+              <p
+                onClick={() =>
+                  document.getElementById("register_modal").showModal()
+                }
+                className="dark:bg-base-200 bg-gray-300 dark:text-white text-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-lg dark:hover:bg-amber-400 hover:bg-slate-400"
+              >
+                Register
+              </p>
+              <Modal id="register_modal" />
+            </div>
+          </div>
+        )}
       </div>
       <div className="p-10"></div>
     </div>
