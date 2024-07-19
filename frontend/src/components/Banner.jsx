@@ -20,12 +20,12 @@ export default function Banner() {
               has something for every reader. Dive into new adventures and let
               us help you find your next great read.
             </p>
+            <div className="mb-4">
+              <AutoPlay />
+            </div>
             <div className="flex flex-col gap-2 md:flex-row">
               <EmailInput />
               <Button value="send" />
-            </div>
-            <div>
-              <AutoPlay />
             </div>
           </div>
         </div>

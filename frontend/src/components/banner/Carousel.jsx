@@ -8,16 +8,16 @@ function AutoPlay() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1500,
-    autoplaySpeed: 4500,
+    speed: 2000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
   };
   return (
-    <div className="slider-container h-72">
+    <div className="slider-container h-72 shadow-lg">
       <Slider {...settings}>
         <div className="h-72">
           <img
-            className="object-cover w-full h-full rounded-lg"
+            className="object-fill w-full h-full rounded-lg"
             src="..components/../src/assets/bookStoreAuthors/Yuval_Noah_Harari.webp"
             alt="loading"
           />
