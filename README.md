@@ -9,9 +9,6 @@ Welcome to the BookStore project, a full-stack web application built using the M
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -84,8 +81,6 @@ Make sure you have the following installed:
 3. Browse the books using the carousel.
 
 
-
-https://github.com/user-attachments/assets/9c61eef8-fcb8-48aa-8fc5-01cad989e37d
 
 
 
