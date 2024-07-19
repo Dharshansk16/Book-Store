@@ -13,7 +13,7 @@ function AutoPlay() {
     cssEase: "linear",
   };
   return (
-    <div className="slider-container h-72 shadow-lg">
+    <div className="slider-container h-72 shadow-lg w-11/12">
       <Slider {...settings}>
         <div className="h-72">
           <img
