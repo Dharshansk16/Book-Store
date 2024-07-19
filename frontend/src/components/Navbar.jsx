@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <div>
       <div
-        className={`navbar bg-base-100  md:max-w-screen-2xl max-w-md container md:mx-auto md:px-10 px-1 fixed top-0 left-0 right-0 z-40 bg-transparent transition duration-300 ${
+        className={`navbar bg-base-100 navbar-center md:px-10 px-1 fixed top-0 left-0 right-0 z-40 bg-transparent transition duration-300 ${
           onScroll
             ? "dark:backdrop-brightness-50 dark:backdrop-contrast-100 backdrop-contrast-50 backdrop-brightness-100"
             : ""
@@ -113,7 +113,7 @@ export default function Navbar() {
           </div>
         )}
       </div>
-      <div className="p-10"></div>
+      <div className="p-8"></div>
     </div>
   );
 }

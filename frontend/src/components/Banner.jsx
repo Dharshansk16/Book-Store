@@ -2,13 +2,14 @@ import React from "react";
 import TextYellow from "../styles/TextYellow";
 import EmailInput from "./banner/EmailInput";
 import Button from "./banner/Button";
+import AutoPlay from "./banner/Carousel";
 
 export default function Banner() {
   return (
     <>
       <div className="md:max-w-screen-2xl max-w-sm md:container md:mx-auto md:px-10  flex flex-col md:flex-row ">
-        <div className="w-full md:w-1/2 my-4 mx-2 md:m-8">
-          <div className="flex  flex-col gap-10">
+        <div className="w-full md:w-1/2 my-4 mx-2 md:m-6">
+          <div className="flex  flex-col gap-8">
             <h1 className="md:text-4xl text-2xl font-bold">
               Welcome to <TextYellow text="bookStore" /> <br />
               Discover Your Next Great <TextYellow text="Read With Us" />
@@ -22,6 +23,9 @@ export default function Banner() {
             <div className="flex flex-col gap-2 md:flex-row">
               <EmailInput />
               <Button value="send" />
+            </div>
+            <div>
+              <AutoPlay />
             </div>
           </div>
         </div>
