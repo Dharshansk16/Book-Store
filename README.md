@@ -43,7 +43,7 @@ Make sure you have the following installed:
 
     ```bash
     cd backend
-    npm install express bycryptjs nodemon mongoose cors
+    npm install 
     ```
 
 3. Create a `.env` file in the `backend` directory and add the following variables:
@@ -65,7 +65,7 @@ Make sure you have the following installed:
 
     ```bash
     cd ../frontend
-    npm install axios
+    npm install 
     ```
 
 2. Start the frontend server:
